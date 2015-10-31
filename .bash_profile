@@ -122,7 +122,6 @@ alias gb="git branch"
 alias gba="git branch -a"
 alias gcam="git commit -am"
 alias gbb="git branch -b"
-alias gch="git checkout"
 
 # Functions
 # =====================
@@ -132,6 +131,10 @@ c () {
 
 add () {
  git add "$@"
+}
+
+gch () {
+  git checkout "$@"
 }
 
 pullall(){
