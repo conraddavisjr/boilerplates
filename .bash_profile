@@ -122,6 +122,7 @@ alias gb="git branch"
 alias gba="git branch -a"
 alias gcam="git commit -am"
 alias gbb="git branch -b"
+alias gcb="git checkout -b"
 
 # Functions
 # =====================
