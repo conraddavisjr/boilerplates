@@ -1,3 +1,9 @@
 Below is a list of questions that I ask before starting any large client projects.
 
-- 
+- Metadata descriptions / Page Title
+- Fonts (The files, so we have them when we work with the PSD) this is important for accuracy and it saves a lot of time when the dev is slicing the PSD and checking for font sizes.
+- Tracking Specs
+- Desired Features
+- Necessary Features
+- The Final (live) Site URL - whats the name of the page?
+- Explicit description of Timeline and deadlines for deliverables (best case, in the form of calendar notifications or verbal)
