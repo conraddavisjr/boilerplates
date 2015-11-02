@@ -1,6 +1,6 @@
 $(function(){
 	var BP_img_handler = {
-		
+
 		init: function(){
 			this.setupVariables();
 			this.setupElements();
@@ -31,7 +31,7 @@ $(function(){
 			this.imgSrc  = '';
 		},
 		setupElements: function(){
-			//page elements	
+			//page elements
 
 		},
 		eventHandlers: function(){
@@ -45,15 +45,15 @@ $(function(){
 			var vpWidth = BP_img_handler.vpWidth = $(window).innerWidth();
 			var viewPort = BP_img_handler.breakPoints;
 			var imgSrc = BP_img_handler.imgSrc;
-			
+
 			/*---------------------------------
 			determine which break point were on
 			-----------------------------------*/
-			if(vpWidth >= viewPort.XL.width){ //XL 
+			if(vpWidth >= viewPort.XL.width){ //XL
 				imgSrc = viewPort.XL.name;
 				console.log("imgSrc: " + imgSrc);
 			}else
-			if(vpWidth < viewPort.XL.width && vpWidth > viewPort.M.width){ //Large 
+			if(vpWidth < viewPort.XL.width && vpWidth > viewPort.M.width){ //Large
 				imgSrc = viewPort.L.name;
 				console.log("imgSrc: " + imgSrc);
 			}else
@@ -74,6 +74,8 @@ $(function(){
 				var imgName = $(this).attr('src');
 				newImgName = imgName.replace(/_.*\./, imgSrc);
 				$(this).attr('src', newImgName);
+				// var regex = /(?:\_(?=[^_]*))(\w+)(?:\.)/
+				// regex.exec("HGDFOUKHLFD_ROGER_xl.png")
 			});
 		}
 
