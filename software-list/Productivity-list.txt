@@ -1,0 +1,5 @@
+Spectacle
+Alfred 2
+Virtual Box
+iTerm
+Kaleidoscope
