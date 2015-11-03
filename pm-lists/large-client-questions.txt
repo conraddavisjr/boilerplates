@@ -7,3 +7,4 @@ Below is a list of questions that I ask before starting any large client project
 - Mission critical Features
 - The Final (live) Site URL - whats the name of the page in the URL?
 - Explicit description of Timeline and deadlines for deliverables (best case, in the form of calendar notifications or verbal).
+- Image Alt tag descriptions; I try my best to give images reasonable descriptions but getting client approved alt tags will save bounce back.

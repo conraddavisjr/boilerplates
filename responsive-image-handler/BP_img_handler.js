@@ -7,6 +7,7 @@ $(function(){
 			this.bpCheck();
 			this.eventHandlers();
 		},
+		//Responsive Breakpoints
 		breakPoints : {
 			S:{
 				width:"480",
@@ -36,7 +37,7 @@ $(function(){
 		},
 		eventHandlers: function(){
 			//event handlers
-			$(window).on('resize', this.bpCheck);
+			$(window).on('resize', this.bpCheck); //read breakpoints
 		},
 
 		//Handlers
@@ -65,14 +66,17 @@ $(function(){
 				imgSrc = viewPort.S.name;
 				console.log("imgSrc: " + imgSrc);
 			}
-			//Now update the imgs in the DOM
+			//Call the imgUpdater function to update the imgs in the DOM
 			BP_img_handler.imgUpdater(imgSrc);
 		},
 		imgUpdater: function(imgSrc){
 			console.log("imgUpdater imgSrc: " + imgSrc);
 			$('img').each(function(){
 				var imgName = $(this).attr('src');
-				newImgName = imgName.replace(/_.*\./, imgSrc);
+				console.log("" + imgName);
+				newImgName = imgName.replace(/(?:\_(?=[^_]*))(?:\.)/, imgSrc);
+				console.log("newImgName: " + newImgName);
+				// newImgName = imgName.replace(/(?:\_(?=[^_]*))(?:\.)/, imgSrc);
 				$(this).attr('src', newImgName);
 				// var regex = /(?:\_(?=[^_]*))(\w+)(?:\.)/
 				// regex.exec("HGDFOUKHLFD_ROGER_xl.png")
