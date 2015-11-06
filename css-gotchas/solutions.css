@@ -1,0 +1,9 @@
+* { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); } /* kill that bule hight nonsence */
+
+/* Dont touch meh pictures*/
+user-drag: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+
+/* fixes 2D repainting in Safari, word... */
+backface-visibility: hidden;
