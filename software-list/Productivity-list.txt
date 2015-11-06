@@ -1,5 +1,22 @@
+//hardware software
 Spectacle
 Alfred 2
 Virtual Box
 iTerm
 Kaleidoscope
+
+
+//Text-editor plugins
+beautify
+javascript-snippets
+emmet
+set-syntax
+
+
+//Chrome extensions
+Full Page Screen Capture
+Checker Plus for Google Calendar™
+Checker Plus for Gmail™
+Bookmark Launcher
+Google Analytics Debugger
+Page Ruler
