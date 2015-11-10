@@ -11,25 +11,26 @@ $(function(){
 		breakPoints : {
 			S:{
 				width:"480",
-				name: "S"
+				name: "_S."
 			},
 			M:{
 				width:"768",
-				name: "M"
+				name: "_M."
 			},
 			L:{
 				width:"960",
-				name: "L"
+				name: "_L."
 			},
 			XL:{
 				width:"1300",
-				name: "XL"
+				name: "_XL."
 			}
 		},
 		setupVariables: function(){
 			//vars
 			this.vpWidth = '';
 			this.imgSrc  = '';
+			this.imgName = '';
 		},
 		setupElements: function(){
 			//page elements
@@ -51,35 +52,35 @@ $(function(){
 			determine which break point were on
 			-----------------------------------*/
 			if(vpWidth >= viewPort.XL.width){ //XL
-				imgSrc = viewPort.XL.name;
+				BP_img_handler.imgSrc = viewPort.XL.name;
 				console.log("imgSrc: " + imgSrc);
 			}else
 			if(vpWidth < viewPort.XL.width && vpWidth > viewPort.M.width){ //Large
-				imgSrc = viewPort.L.name;
+				BP_img_handler.imgSrc = viewPort.L.name;
 				console.log("imgSrc: " + imgSrc);
 			}else
 			if(vpWidth <= viewPort.M.width && vpWidth > viewPort.S.width){ //Medium
-				imgSrc = viewPort.M.name;
+				BP_img_handler.imgSrc = viewPort.M.name;
 				console.log("imgSrc: " + imgSrc);
 			}else
 			if(vpWidth <= viewPort.S.width){ //Small
-				imgSrc = viewPort.S.name;
+				BP_img_handler.imgSrc = viewPort.S.name;
 				console.log("imgSrc: " + imgSrc);
 			}
 			//Call the imgUpdater function to update the imgs in the DOM
-			BP_img_handler.imgUpdater(imgSrc);
+			BP_img_handler.imgUpdater();
 		},
-		imgUpdater: function(imgSrc){
-			console.log("imgUpdater imgSrc: " + imgSrc);
+		imgUpdater: function(){
 			$('img').each(function(){
-				var imgName = $(this).attr('src');
-				console.log("" + imgName);
-				newImgName = imgName.replace(/(?:\_(?=[^_]*))(?:\.)/, imgSrc);
+				console.log("BP_img_handler.imgSrc: " + BP_img_handler.imgSrc);
+				BP_img_handler.imgName = $(this).attr('src');
+				console.log("BP_img_handler.imgName: " + BP_img_handler.imgName);
+				var newImgName = BP_img_handler.imgName.replace(/(_([^_]*))(?:\.)/, BP_img_handler.imgSrc);
 				console.log("newImgName: " + newImgName);
 				// newImgName = imgName.replace(/(?:\_(?=[^_]*))(?:\.)/, imgSrc);
 				$(this).attr('src', newImgName);
 				// var regex = /(?:\_(?=[^_]*))(\w+)(?:\.)/
-				// regex.exec("HGDFOUKHLFD_ROGER_xl.png")
+				// regex.exec("HGDFOUKHLFD_ROGER_xl.png")     ----->(_([^_]*))(?:\.)
 			});
 		}
 
