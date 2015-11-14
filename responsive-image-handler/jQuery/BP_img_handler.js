@@ -1,4 +1,4 @@
-window.onload = function(){
+$(function(){
 	var RS_img_handler = {
 
 		init: function(){
@@ -38,7 +38,7 @@ window.onload = function(){
 		},
 		eventHandlers: function(){
 			//event handlers
-			window.addEventListener('resize', this.bpCheck, false); //read breakpoints
+			$(window).on('resize', this.bpCheck); //read breakpoints
 		},
 
 		//Handlers
@@ -73,17 +73,14 @@ window.onload = function(){
 		},
 		imgUpdater: function(){
 			//cycle through each img tag on the page and update its source.
-			var images = document.getElementsByTagName('img');
-		    for(var i = 0; i < images.length; i++) {
-		        var thisImg = images[i];
-		        var source = thisImg.getAttribute('imgName');
-		        //update the image size corresponding to the current viewport
-		        var newImgName = source.replace(/(_([^_]*))(?:\.)/, RS_img_handler.imgSrc);
-				thisImg.imgName = newImgName;
-				thisImg.src = newImgName;
-		    }
+			$('img').each(function(){
+				RS_img_handler.imgName = $(this).attr('src');
+				var newImgName = RS_img_handler.imgName.replace(/(_([^_]*))(?:\.)/, RS_img_handler.imgSrc);
+				$(this).attr('src', newImgName);
+			});
 		}
+
 	};/* RS_img_handler (END) */
 	RS_img_handler.init();
 	window.RS_img_handler = RS_img_handler;
-};
+});
