@@ -1,0 +1,40 @@
+/*! responsive-image-handler 0.0.1 | MIT *
+ * https://github.com/conraddavisjr/boilerplates/tree/master/responsive-image-handler !*/
+---------------
+AUTHOR: Conrad Davis Jr
+---------------
+
+
+
+
+responsive-image-handler(RIH) automates responsive image handling.
+
+----------------
+HOW IT WORKS
+---------------
+
+By default, RIH accepts a series of breakpoints by order from S(small) to XL(extra-large) with declared scale(browser width) values and a corresponding name value.
+The name value is used to append a string to the end of an image name thus serve a image that corresponds with the current browser width.
+
+***********************************
+
+		breakPoints : {
+			S:{
+				scale:"480",
+				name: "_S."
+			},
+			M:{
+				scale:"768",
+				name: "_M."
+			},
+			L:{
+				scale:"960",
+				name: "_L."
+			},
+			XL:{
+				scale:"1300",
+				name: "_XL."
+			}
+		},
+		
+************************************		
