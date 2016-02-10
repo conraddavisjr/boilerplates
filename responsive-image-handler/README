@@ -9,14 +9,20 @@ AUTHOR: Conrad Davis Jr
 
 responsive-image-handler(RIH) automates responsive image handling.
 
-----------------
+---------------
+USE CASE
+---------------
+When you have a lot of image variations throughout your breakpoints and would benefit from a naming convention for images i.e "yourImgName_S.png" and "yourImgName_L.png"
+
+
+---------------
 HOW IT WORKS
 ---------------
 
 By default, RIH accepts a series of breakpoints by order from S(small) to XL(extra-large) with declared scale(browser width) values and a corresponding name value.
-The name value is used to append a string to the end of an image name thus serve a image that corresponds with the current browser width.
+The name value is used to append a string to the end of an image's src thus load an image that corresponds with the current browser size (width).
 
-***********************************
+************************************
 
 		breakPoints : {
 			S:{
