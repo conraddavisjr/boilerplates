@@ -77,12 +77,21 @@ window.onload = function(){
 		    for(var i = 0; i < images.length; i++) {
 		        var thisImg = images[i];
 		        var source = thisImg.getAttribute('imgName');
-		        //update the image size corresponding to the current viewport
+		        //update the image size to match the current viewport
 		        var newImgName = source.replace(/(_([^_]*))(?:\.)/, RS_img_handler.imgSrc);
 				thisImg.imgName = newImgName;
 				thisImg.src = newImgName;
 		    }
 		}
+
+		//Retina display handler
+
+
+		//file exthandler i.e: jpg to png
+
+
+		//default image for sprites etc
+
 	};/* RS_img_handler (END) */
 	RS_img_handler.init();
 	window.RS_img_handler = RS_img_handler;

@@ -1,0 +1,18 @@
+img{
+	width:100%;
+}
+.container{
+	max-width: 1300px;
+}
+main{
+	border: 2px solid black;
+}
+.col-25, .col-50{
+	float: left;
+}
+.col-25{
+	width:25%;
+}
+.col-50{
+	width:50%;
+}
