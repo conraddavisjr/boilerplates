@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		picture {display: block; width: 100%; text-align: center;}
+	</style>
+
+	<picture>
+		<source media="(min-width: 650px)" srcset="imgs/kitten-large.png">
+		<source media="(min-width: 465px)" srcset="imgs/kitten-medium.png">
+		<!-- img tag for browsers that do not support picture element -->
+		<img src="imgs/kitten-small.png" alt="a cute kitten">
+	</picture>
+</body>
+</html>
