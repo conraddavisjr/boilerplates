@@ -67,7 +67,7 @@ window.onload = function(){
 			RS_img_handler.imgUpdater();
 		},
 		imgUpdater: function(){
-			//cycle through each img tag on the page and update its source.
+			//cycle through each img tag on the page and get its image name.
 			var images = document.getElementsByTagName('img');
 		    for(var i = 0; i < images.length; i++) {
 		        var thisImg = images[i];
@@ -77,8 +77,10 @@ window.onload = function(){
 				thisImg.imgName = newImgName;
 				thisImg.src = newImgName;
 		    }
-		}
+		},
+		retinaDisplay: function(){
 
+		}
 		//Retina display handler
 
 

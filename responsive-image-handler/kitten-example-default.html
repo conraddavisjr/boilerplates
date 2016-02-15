@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Kitten example default</title>
 </head>
 <body>
 	<style>
@@ -11,8 +11,13 @@
 	<picture>
 		<source media="(min-width: 650px)" srcset="imgs/kitten-large.png">
 		<source media="(min-width: 465px)" srcset="imgs/kitten-medium.png">
-		<!-- img tag for browsers that do not support picture element -->
 		<img src="imgs/kitten-small.png" alt="a cute kitten">
+	</picture>
+	<picture>
+		<source media="(min-width: 1300px)" srcset="imgs/plant-grow_XL.jpg">
+		<source media="(min-width: 650px)" srcset="imgs/plant-grow_L.jpg">
+		<source media="(min-width: 465px)" srcset="imgs/plant-grow_M.jpg">
+		<img src="imgs/plant-grow_S.jpg" alt="Plant phases">
 	</picture>
 </body>
 </html>
