@@ -163,6 +163,45 @@ git branch -D "$@"
 # Case-Insensitive Auto Completion
 bind "set completion-ignore-case on"
 
+
+# ALIAS!
+alias l='ls -lAGh'
+alias md='mkdir -p'
+alias rd='rmdir -p'
+alias ngrok='/opt/homebrew-cask/Caskroom/ngrok/latest/ngrok'
+alias bi="bundle install"
+alias be="bundle exec"
+alias gfa="git fetch --all"
+alias gmom="git merge origin/master"
+alias gmm="git merge master"
+alias gcam="git commit -a -m"
+alias gb="git branch"
+alias gba="git branch -a"
+alias gd="git diff"
+alias gco="git checkout"
+alias gst="git status"
+
+
+# Vagrant commands
+alias vd='vagrant destroy -f'
+alias vs='vagrant suspend'
+alias vh='vagrant halt'
+alias vu='vagrant up'
+alias vp='vagrant provision'
+alias vr='vagrant reload'
+alias vsh='vagrant ssh'
+
+
+#SERVER
+alias ngrok='cd /usr/local/bin/ && ./ngrok'
+
+
+# EDITOR
+export EDITOR='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+export BUNDLER_EDITOR=$EDITOR
+export GIT_EDITOR="$EDITOR -w"
+alias edit=$EDITOR
+
 # RVM
 # loads RVM into the shell
 # This must be the last line of your bash_profile always
